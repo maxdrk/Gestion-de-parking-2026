@@ -12,6 +12,8 @@
 
 | Element | Format | Exemple |
 | ------- | -------| --------|
+| Règle métier | RM - XX | RM-01|
+| encore à définir | xxx | xxx
 
 
 
