@@ -9,4 +9,4 @@
 | Greg | 3 - 6 |
 | Vlad | 3 - 6 |
 
->> sur Base de cette template https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf
+> sur Base de cette template <br> **https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf**
