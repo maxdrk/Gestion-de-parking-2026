@@ -27,10 +27,10 @@ Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une co
 
 - Client : Jean-Luc Bértrand (Directeur d'exploitation)
 - Préstataire : 
-            1. Maxime Derick
-            2. Gregory Kabasele 
-            3. Liam Bruyère
-            4. Vlad ?
+    1. Maxime Derick
+    2. Gregory Kabasele 
+    3. Liam Bruyère
+    4. Vlad ?
 
 ### Présentation du projet
 
