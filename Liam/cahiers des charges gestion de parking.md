@@ -1,5 +1,12 @@
 # Cahier de charges Gestion de parkings Valmont
 
+- Auteur : 
+1. Maxime Derick
+2. gregory Kabasele 
+3. Liam Bruyère 
+4. Vlad vlad
+- Version : V1
+
 # Convention d'identification
 
 | Element | Format | Exemple |
