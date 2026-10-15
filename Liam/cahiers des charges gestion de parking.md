@@ -2,6 +2,19 @@
 
 Le client souhaiterais passer d'une gestion de son logiciel héberger par l'un de ces prestataires en une version local. 
 
+# Convention d'identification
+
+| Element | Format | Exemple |
+| ------- | -------| --------|
+| Règle métier | RM - XX | RM-01|
+| encore à définir | xxx | xxx
+
+## Contexte
+
+Actuellement, l'ensemble du système de gestion repose exclusivement sur une architecture 100 % Cloud. Cette dépendance présente un risque majeur pour la continuité de service : le moindre problème d'accès au réseau provoque une panne totale des installations.
+
+Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une coupure Internet de 48 heures. Durant cette période, le système est devenu entièrement indisponible, entraînant une perte d'exploitation estimée à 6 000 €.
+
 ### présentation du client 
 
 - Client : Jean-Luc Bertrand (Directeur d'exploitation)
