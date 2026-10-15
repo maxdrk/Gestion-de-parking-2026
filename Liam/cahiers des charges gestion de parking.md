@@ -1,6 +1,5 @@
 # Cahier de charges Gestion de parkings Valmont
 
-a
 
 - Auteur :
 
@@ -75,8 +74,29 @@ Enfin, la solution devra être conçue de manière modulaire afin de faciliter s
 
 ## Périmètre
 
-** Inclus : **
+** Éléments inclus **
 
-** Exclus ** :
+Hébergement de l'application sur une infrastructure locale.
 
-1. Hébérger un quelconque système sur le cloud (internet)
+Gestion des abonnés, des paiements et des tickets.
+
+Suivi des entrées et sorties des véhicules.
+
+Supervision de l'activité des parkings via une interface centralisée.
+
+Maintien des fonctionnalités essentielles en cas de coupure Internet.
+
+** Éléments exclus **
+
+Hébergement de l'application ou de ses composants sur une infrastructure Cloud accessible via Internet.
+
+
+## Données 
+
+| Opération | Acteurs | Fonctionnalités |
+| --------- | ------- | --------------- |
+| Consulter | 
+
+
+
+> Utilisation de Claude et ChatGPT (GPT-6) pour reformuler et structurer les idées recueillies lors des échanges avec Monsieur Bertrand.
