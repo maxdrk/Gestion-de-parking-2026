@@ -40,7 +40,11 @@ Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une co
 
 ### Objectif du projet
 
-Pour garantir la résilience et la continuité de l'activité, la Régie des Parkings souhaite migrer vers une solution moderne répondant aux critères suivants : Fonctionnement en Local : Le système doit impérativement continuer de fonctionner en autonomie locale (gestion des accès, paiements en borne, entrées/sorties) même en cas de perte de la connexion Internet. Supervision & Interface Réduite/Claire : Une interface de pilotage intuitive offrant une vision en temps réel : Du suivi détaillé de chaque entrée et sortie client. De l'état des paiements (tickets horodateurs, paiements en borne). De la gestion et du suivi des abonnés.
+Afin de garantir la résilience et la continuité de son activité, la Régie des Parkings souhaite migrer vers une solution moderne répondant à plusieurs critères essentiels.
+
+Tout d’abord, le système doit impérativement pouvoir fonctionner en local. Même en cas de perte de la connexion Internet, il doit continuer d’assurer en toute autonomie la gestion des accès, les paiements en borne ainsi que le contrôle des entrées et des sorties.
+
+Ensuite, la solution doit offrir une interface de supervision claire et épurée, permettant un pilotage intuitif des installations. Cette interface doit fournir une vision en temps réel de l’activité du parking, avec un suivi détaillé de chaque entrée et sortie des clients. Elle doit également permettre de consulter l’état des paiements, qu’il s’agisse des tickets horodateurs ou des transactions effectuées en borne. Enfin, elle doit intégrer la gestion et le suivi des abonnés.és.
 
 ## Description générale
 
