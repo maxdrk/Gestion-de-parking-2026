@@ -80,3 +80,18 @@ Enfin, la solution devra être conçue de manière modulaire afin de faciliter s
 ** Exclus ** :
 
 1. Hébérger un quelconque système sur le cloud (internet)
+
+## données
+
+- entrés (donnes un ticket)
+- sortie du parking (verification du paiements)
+- paiements à la caiss automatique
+- verification du paiements
+- un agent :
+  - aides les clients
+  - gère les paiements
+  - s’occupe de ticket perdu, il verifie l'heures d'arrivé des véhicules grâce a leurs plaque
+  - lorsque le système tombe en panne il s’occupe des paiements
+- gestion des abonnées avec badges
+- comptages et affichage des places réstante
+- cloture des caisses avec vérification du total par mode de paiemen et l'écart avec la caisse réelle
