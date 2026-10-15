@@ -74,7 +74,7 @@ Enfin, la solution devra être conçue de manière modulaire afin de faciliter s
 
 ## Périmètre
 
-** Éléments inclus **
+**Éléments inclus**
 
 Hébergement de l'application sur une infrastructure locale.
 
@@ -86,7 +86,7 @@ Supervision de l'activité des parkings via une interface centralisée.
 
 Maintien des fonctionnalités essentielles en cas de coupure Internet.
 
-** Éléments exclus **
+**Éléments exclus**
 
 Hébergement de l'application ou de ses composants sur une infrastructure Cloud accessible via Internet.
 
