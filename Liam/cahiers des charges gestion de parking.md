@@ -76,19 +76,19 @@ Enfin, la solution devra être conçue de manière modulaire afin de faciliter s
 
 **Éléments inclus**
 
-Hébergement de l'application sur une infrastructure locale.
+- Hébergement de l'application sur une infrastructure locale.
 
-Gestion des abonnés, des paiements et des tickets.
+- Gestion des abonnés, des paiements et des tickets.
 
-Suivi des entrées et sorties des véhicules.
+- Suivi des entrées et sorties des véhicules.
 
-Supervision de l'activité des parkings via une interface centralisée.
+- Supervision de l'activité des parkings via une interface centralisée.
 
-Maintien des fonctionnalités essentielles en cas de coupure Internet.
+- Maintien des fonctionnalités essentielles en cas de coupure Internet.
 
 **Éléments exclus**
 
-Hébergement de l'application ou de ses composants sur une infrastructure Cloud accessible via Internet.
+- Hébergement de l'application ou de ses composants sur une infrastructure Cloud accessible via Internet.
 
 
 ## Données 
