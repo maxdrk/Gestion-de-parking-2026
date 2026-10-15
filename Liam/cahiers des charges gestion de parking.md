@@ -1,6 +1,4 @@
-## 1. contexte 
-
-Le client souhaiterais passer d'une gestion de son logiciel héberger par l'un de ces prestataires en une version local. 
+# Cahier de charges Gestion de parkings Valmont
 
 # Convention d'identification
 
@@ -23,6 +21,7 @@ Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une co
 2. Gregory Kabasele
 3. Liam Bruyère
 4. Vladyslav Volodichev
+
 ### Présentation du projet
 
 - Problématique : Actuellement, l'ensemble du système de gestion repose exclusivement sur une architecture 100 % Cloud. Cette dépendance présente un risque majeur pour la continuité de service : le moindre problème d'accès au réseau provoque une panne totale des installations.
