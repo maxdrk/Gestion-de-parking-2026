@@ -1,6 +1,5 @@
 # Cahier de charges Gestion de parkings Valmont
 
-a
 
 - Auteur :
 
