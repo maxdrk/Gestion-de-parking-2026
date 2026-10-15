@@ -1,18 +1,22 @@
 # Cahier de charges Gestion de parkings Valmont
+
 a
-- Auteur : 
+
+- Auteur :
+
 1. Maxime Derick
-2. gregory Kabasele 
-3. Liam Bruyère 
+2. gregory Kabasele
+3. Liam Bruyère
 4. Vlad vlad
+
 - Version : V1
 
 # Convention d'identification
 
-| Element | Format | Exemple |
-| ------- | -------| --------|
-| Règle métier | RM - XX | RM-01|
-| encore à définir | xxx | xxx
+| Element          | Format  | Exemple |
+| ---------------- | ------- | ------- |
+| Règle métier     | RM - XX | RM-01   |
+| encore à définir | xxx     | xxx     |
 
 ## Contexte
 
@@ -20,10 +24,11 @@ Actuellement, l'ensemble du système de gestion repose exclusivement sur une arc
 
 Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une coupure Internet de 48 heures. Durant cette période, le système est devenu entièrement indisponible, entraînant une perte d'exploitation estimée à 6 000 €.
 
-### présentation du client 
+### présentation du client
 
 - Client : Jean-Luc Bertrand (Directeur d'exploitation)
 - Prestataire :
+
 1. Maxime Derick
 2. Gregory Kabasele
 3. Liam Bruyère
@@ -36,8 +41,6 @@ Dernier incident marquant (Mars 2026) : Des travaux de voierie ont causé une co
 ### Objectif du projet
 
 Pour garantir la résilience et la continuité de l'activité, la Régie des Parkings souhaite migrer vers une solution moderne répondant aux critères suivants : Fonctionnement en Local : Le système doit impérativement continuer de fonctionner en autonomie locale (gestion des accès, paiements en borne, entrées/sorties) même en cas de perte de la connexion Internet. Supervision & Interface Réduite/Claire : Une interface de pilotage intuitive offrant une vision en temps réel : Du suivi détaillé de chaque entrée et sortie client. De l'état des paiements (tickets horodateurs, paiements en borne). De la gestion et du suivi des abonnés.
-
-## Règles métiers
 
 ## Description générale
 
@@ -58,3 +61,10 @@ L'application devra proposer une interface utilisateur claire, intuitive et acce
 L'architecture devra également prévoir la conservation locale des données et des mécanismes de sauvegarde afin de limiter les risques de perte d'informations. Si une synchronisation avec des services externes est nécessaire, elle devra pouvoir reprendre après le rétablissement de la connexion Internet, sans provoquer de doublons ni de pertes de données.
 
 Enfin, la solution devra être conçue de manière modulaire afin de faciliter sa maintenance, son évolution et l'ajout éventuel de nouvelles fonctionnalités. Les modalités précises de fonctionnement hors ligne, de synchronisation, de sécurité et d'intégration avec les équipements existants seront définies dans les exigences fonctionnelles et techniques du projet.
+
+## Règles métiers
+
+- RM-01 : horaires d'ouverture : 24/24 7j/7
+- RM-02 : capacités 220 places
+- RM-03 : présence d'un agent d'acceuil : du lundi au vendredi, de 07H00 à 19h00
+- RM-04 : gestion 100% automatisé (bornes et caisses automatiques) le reste du temps (soir, week-ends et jour fériés)
