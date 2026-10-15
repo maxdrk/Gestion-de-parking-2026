@@ -72,3 +72,11 @@ Enfin, la solution devra être conçue de manière modulaire afin de faciliter s
 - RM-02 : capacités 220 places
 - RM-03 : présence d'un agent d'acceuil : du lundi au vendredi, de 07H00 à 19h00
 - RM-04 : gestion 100% automatisé (bornes et caisses automatiques) le reste du temps (soir, week-ends et jour fériés)
+
+## Périmètre
+
+** Inclus : **
+
+** Exclus ** :
+
+1. Hébérger un quelconque système sur le cloud (internet)
