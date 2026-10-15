@@ -1,6 +1,5 @@
 # Cahier de charges Gestion de parkings Valmont
 
-
 - Auteur :
 
 1. Maxime Derick
@@ -104,5 +103,14 @@ Hébergement de l'application ou de ses composants sur une infrastructure Cloud 
 - gestion des abonnées avec badges
 - comptages et affichage des places réstante
 - cloture des caisses avec vérification du total par mode de paiemen et l'écart avec la caisse réelle
+
+| Code | Donnée            | Contenu                                                                                  | Créer                        | Consulter                             | Modifier / Supprimer                              | Fonctionnalités  |
+| ---- | ----------------- | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------- | ------------------------------------------------- | ---------------- |
+| D-01 | Ticket            | N° de ticket, date et heure d'entrée, plaque, statut (en cours, payé, perdu)             | Borne d'entrée               | Agent, borne de sortie, caisse auto   | Statut modifié par la caisse auto ou l'agent      | F-01 à F-05      |
+| D-02 | Passage           | Date et heure, sens (entrée/sortie), plaque lue, ticket ou badge, borne                  | Bornes d'entrée et de sortie | Agent (ticket perdu), superviseur     | Non modifiable, purge automatique (RGPD)          | F-01, F-02, F-04 |
+| D-03 | Paiement          | Montant, mode (espèces, carte, sans contact), date et heure, ticket, lieu d'encaissement | Client (caisse auto), agent  | Agent, superviseur                    | Annulation par l'agent avec justification         | F-03, F-05, F-08 |
+| D-04 | Abonné            | Nom, coordonnées, plaque(s), type et dates d'abonnement, n° et statut du badge           | Agent                        | Agent, bornes (vérif. badge)          | Agent (renouvellement, blocage, fin d'abonnement) | F-06             |
+| D-05 | Occupation        | Capacité totale, places occupées, places restantes                                       | Système                      | Clients (panneau), agent, superviseur | Mise à jour automatique, correction par l'agent   | F-07             |
+| D-06 | Clôture de caisse | Date, agent, total théorique par mode de paiement, montant compté, écart                 | Agent                        | Agent, superviseur                    | Non modifiable une fois validée                   | F-08             |
 
 > Utilisation de Claude et ChatGPT (GPT-6) pour reformuler et structurer les idées recueillies lors des échanges avec Monsieur Bertrand.
