@@ -5,7 +5,7 @@
 1. Maxime Derick
 2. gregory Kabasele
 3. Liam Bruyère
-4. Vlad vlad
+4. Vlad Volodichev
 
 - Version : V1
 
