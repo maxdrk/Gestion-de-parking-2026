@@ -91,19 +91,6 @@ Hébergement de l'application ou de ses composants sur une infrastructure Cloud 
 
 ## Données
 
-- entrés (donnes un ticket)
-- sortie du parking (verification du paiements)
-- paiements à la caiss automatique
-- verification du paiements
-- un agent :
-  - aides les clients
-  - gère les paiements
-  - s’occupe de ticket perdu, il verifie l'heures d'arrivé des véhicules grâce a leurs plaque
-  - lorsque le système tombe en panne il s’occupe des paiements
-- gestion des abonnées avec badges
-- comptages et affichage des places réstante
-- cloture des caisses avec vérification du total par mode de paiemen et l'écart avec la caisse réelle
-
 | Code | Donnée            | Contenu                                                                                  | Créer                        | Consulter                             | Modifier / Supprimer                              | Fonctionnalités  |
 | ---- | ----------------- | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------- | ------------------------------------------------- | ---------------- |
 | D-01 | Ticket            | N° de ticket, date et heure d'entrée, plaque, statut (en cours, payé, perdu)             | Borne d'entrée               | Agent, borne de sortie, caisse auto   | Statut modifié par la caisse auto ou l'agent      | F-01 à F-05      |
