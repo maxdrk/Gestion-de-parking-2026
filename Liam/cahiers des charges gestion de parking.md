@@ -100,4 +100,4 @@ Hébergement de l'application ou de ses composants sur une infrastructure Cloud 
 | D-05 | Occupation        | Capacité totale, places occupées, places restantes                                       | Système                      | Clients (panneau), agent, superviseur | Mise à jour automatique, correction par l'agent   | F-07             |
 | D-06 | Clôture de caisse | Date, agent, total théorique par mode de paiement, montant compté, écart                 | Agent                        | Agent, superviseur                    | Non modifiable une fois validée                   | F-08             |
 
-> Utilisation de Claude et ChatGPT (GPT-6) pour reformuler et structurer les idées recueillies lors des échanges avec Monsieur Bertrand.
+> Utilisation de Claude (opus 5.5) et ChatGPT (GPT-6) pour reformuler et structurer les idées recueillies lors des échanges avec Monsieur Bertrand.
