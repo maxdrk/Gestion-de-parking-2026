@@ -19,7 +19,7 @@ Le montant dû est calculé à la sortie à partir des heures d’entrée et de 
 ## Ce qui manque à faire 
 
 - Faire la grille tarifaire afin de déterminer le montant à payer en fonction de la durée obtenu 
-- Eventuellemnt préparer un runner pour les appareils sous Macos,Linux
+- Eventuellemnt préparer un runner pour les appareils sous Macos,Linux (encore à tester)
 # Exemple
 
 ![alt text](photos/image.png)

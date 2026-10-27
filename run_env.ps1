@@ -4,7 +4,7 @@ Write-Host "Generation du venv" -ForegroundColor Green
 try {
     python -m venv venv
     if ($LASTEXITCODE -ne 0) {
-        throw "La création du venv a echoue."
+        throw "La creation du venv a echoue."
     }
 
     Write-Host "Venv cree, activation..." -ForegroundColor Green
@@ -17,7 +17,7 @@ try {
     Write-Host("Installation des dependances python")
     python -m pip install -r requirement.txt
     if ($LASTEXITCODE -ne 0){
-        throw "L'installation des dépendances à échoué" 
+        throw "L'installation des dépendances a echoue" 
     }
 
     Write-Host "Lancement du programme de gestion de paiement" -ForegroundColor Green
