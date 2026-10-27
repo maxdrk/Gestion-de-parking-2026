@@ -42,6 +42,8 @@ On peut aussi lancer le programme depuis l'environnement virtuel déjà activé 
 python .\main.py
 ```
 
+> Le runner Linux est encore en préparation 
+
 ## Fonctionnement actuel de `main.py`
 
 Le programme demande d'abord l'ID du ticket à clôturer, puis crée un nouveau ticket, tente de clôturer le ticket saisi et affiche les lignes de la base dans Pandas. Il s'agit d'un enchaînement de démonstration, pas encore d'un menu d'application. Pour clôturer le ticket créé pendant cette même exécution, il faut connaître son ID avant la saisie ; le programme n'affiche pas encore clairement cet ID avant de demander lequel clôturer.
