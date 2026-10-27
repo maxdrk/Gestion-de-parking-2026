@@ -42,7 +42,7 @@ On peut aussi lancer le programme depuis l'environnement virtuel déjà activé 
 python .\main.py
 ```
 
-> Le runner Linux est encore en préparation 
+> Le runner Linux est encore à tester 
 
 ## Fonctionnement actuel de `main.py`
 
