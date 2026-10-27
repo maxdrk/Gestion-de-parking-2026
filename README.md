@@ -53,3 +53,13 @@ Le programme demande d'abord l'ID du ticket à clôturer, puis crée un nouveau 
 - Le parcours complet et les cas d'erreur n'ont pas encore été validés dans ce README.
 - Aucun calcul de tarif, suivi du nombre de places, export de fichier ou interface graphique n'est présent dans les fichiers décrits ici.
 
+# Exemple 
+
+## Résultat attendu du script si tout est déjà installé 
+
+![alt text](photos/image.png)
+
+
+## Résultat attendu si rien est installé
+
+![alt text](photos/image2.png)

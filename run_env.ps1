@@ -14,7 +14,7 @@ try {
         throw "L'activation du venv a echoue." 
     }
 
-    Write-Host("Installation des dépendances python")
+    Write-Host("Installation des dependances python")
     python -m pip install -r requirement.txt
     if ($LASTEXITCODE -ne 0){
         throw "L'installation des dépendances à échoué" 
