@@ -9,4 +9,15 @@
 | Greg | 3 - 6 |
 | Vlad | 3 - 6 |
 
+
+## Etape 2 : Concevoir les différents diagrammes 
+
+- diagramme use case : voir wiki
+
+## MVP
+
+- fonction d'entrée et sortie du parking : Dans la branche enter-exit
+
+---
+
 > sur Base de cette template <br> **https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf**
