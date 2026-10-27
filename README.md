@@ -1,66 +1,55 @@
 # Gestion des entrées et sorties du parking
 
-## Présentation
 
-Cette fonctionnalité gère le passage des véhicules dans un parking : un ticket est créé à l'entrée, puis retrouvé à la sortie à l'aide de sa référence. Les données sont stockées localement dans une base SQLite.
+> Utilisation de l’IA : ChatGPT (modèle Luna 6) a été utilisé pour reformuler et structurer les idées déjà présentes dans le README de base. Le contenu décrit le projet et ses fonctionnalités prévues.
 
-## Objectif
+## État actuel
 
-Permettre de :
+Ce dépôt contient un prototype Python en ligne de commande pour créer et clôturer des tickets de parking. Les tickets sont enregistrés localement dans `tickets.db`, une base SQLite.
 
-- créer un ticket lors de l'entrée d'un véhicule ;
-- associer au ticket une référence unique et l'heure d'entrée ;
-- retrouver le ticket à la sortie à partir de sa référence ;
-- enregistrer l'heure de sortie ;
-- consulter les stationnements en cours et l'historique.
+Le code est organisé dans les fichiers suivants :
 
-## Technologies envisagées
+- `main.py` : crée la table si nécessaire, demande un ID de ticket, crée un ticket, tente de clôturer le ticket correspondant à l'ID saisi, puis demande l'affichage des données avec Pandas.
+- `enter.py` : crée un ticket et laisse SQLite attribuer son ID ainsi que l'heure d'entrée (`CURRENT_TIMESTAMP`).
+- `exit.py` : recherche un ticket par son ID, vérifie qu'il existe et qu'il n'est pas déjà clôturé, puis enregistre l'heure de sortie avec `datetime.now()`.
+- `Formjson.py` : lit les tickets, les transforme en JSON, puis convertit ce JSON en DataFrame Pandas pour l'afficher.
+- `requirement.txt` : liste Pandas comme dépendance Python.
+- `run_env.ps1` : crée un environnement virtuel, l'active, installe les dépendances et lance `main.py`.
 
-- **SQLite** : stockage local des tickets et des heures de passage ;
-- **Pandas** : éventuellement pour analyser les données, produire des tableaux ou des rapports. Il n'est pas nécessaire pour les opérations de stockage de base.
+## Données stockées
 
-Le langage, l'interface et le mode de saisie ou de lecture des références restent à confirmer selon le cahier des charges.
-
-## Données d'un ticket
+La table `tickets` contient :
 
 | Champ | Description |
 |---|---|
-| `id` | Identifiant unique du ticket, utilisé pour le retrouver à la sortie |
-| `heure_entree` | Date et heure de création du ticket |
-| `heure_sortie` | Date et heure de sortie ; vide tant que le véhicule est dans le parking |
+| `id` | Identifiant généré automatiquement ; il sert de référence du ticket |
+| `heure_entree` | Date et heure d'entrée, définies par défaut par SQLite avec `CURRENT_TIMESTAMP` |
+| `heure_sortie` | Date et heure de sortie ; valeur vide tant que le ticket est ouvert |
 
-## Parcours prévu
+## Lancer le prototype
 
-1. À l'entrée, générer ou saisir une référence unique et enregistrer l'heure d'entrée.
-2. À la sortie, rechercher le ticket par sa référence.
-3. Si le ticket existe et n'a pas encore de sortie, enregistrer l'heure de sortie.
-4. Permettre de consulter les tickets encore actifs et l'historique des tickets terminés.
+Depuis PowerShell, à la racine du dépôt :
 
-## Première version (MVP)
-
-- Créer la base SQLite et la table des tickets.
-- Implémenter l'enregistrement d'une entrée.
-- Implémenter la sortie à partir d'une référence.
-- Afficher les stationnements en cours et l'historique.
-- Gérer les erreurs courantes : référence inconnue, référence déjà utilisée ou ticket déjà clôturé.
-
-## Points à confirmer
-
-- La référence est-elle imprimée ou générée automatiquement par le système ?
-- Comment la référence est-elle fournie à la sortie : saisie, lecture optique ou autre ?
-- L'heure est-elle toujours horodatée automatiquement ?
-- Faut-il gérer le nombre de places disponibles, calculer un tarif ou produire des exports ?
-- Quelles contraintes de conservation et de format des dates le client impose-t-il ?
-
-## Développement
-
-Travailler sur une branche dédiée, par exemple `feature/parking-entrees-sorties`. Tester le parcours complet entrée → recherche par référence → sortie avant de proposer les changements à fusionner dans `main`.
-
-
-## Utilisation du code 
-
-### Powershell
-
+```powershell
+.\run_env.ps1
 ```
-./run_env.ps1
+
+Le script installe les dépendances indiquées dans `requirement.txt` puis lance le programme. Il utilise `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`, limité au processus PowerShell courant.
+
+On peut aussi lancer le programme depuis l'environnement virtuel déjà activé :
+
+```powershell
+python .\main.py
 ```
+
+## Fonctionnement actuel de `main.py`
+
+Le programme demande d'abord l'ID du ticket à clôturer, puis crée un nouveau ticket, tente de clôturer le ticket saisi et affiche les lignes de la base dans Pandas. Il s'agit d'un enchaînement de démonstration, pas encore d'un menu d'application. Pour clôturer le ticket créé pendant cette même exécution, il faut connaître son ID avant la saisie ; le programme n'affiche pas encore clairement cet ID avant de demander lequel clôturer.
+
+## Limites et prochaines étapes
+
+- L'affichage Pandas dépend du bon chargement de ses bibliothèques natives. Sur la machine de développement, Windows a bloqué une DLL de Pandas avec une stratégie de contrôle d'application ; l'affichage Pandas peut donc échouer avant de présenter les données.
+- Le programme ne propose pas encore de menu séparant les actions « entrée », « sortie » et « consultation ».
+- Le parcours complet et les cas d'erreur n'ont pas encore été validés dans ce README.
+- Aucun calcul de tarif, suivi du nombre de places, export de fichier ou interface graphique n'est présent dans les fichiers décrits ici.
+

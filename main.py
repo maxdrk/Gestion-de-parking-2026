@@ -17,13 +17,16 @@ with sqlite3.connect("tickets.db") as connection:
 ticketCloture = int(input('ticket à cloturé :'))
 
 
+print("-----------------------------")
 print("Test de génération d'entrée")
 enter.creation_ticket(connection=connection)
 
-
+print("-------------------------------")
 print('Test de fermeture de ticket')
 exit.sortie_ticket(connection=connection,ticket_id=ticketCloture)
 
+
+print("-----------------------------------")
 print ("Transformation des données pour affichage optimal")
 Formjson.toPandas(connection)
 
