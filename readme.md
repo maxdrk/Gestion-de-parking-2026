@@ -1,6 +1,6 @@
 # Conception du projet de gestion de parking 
 
-## Etape 1 : Concevoir le cahier de charge
+## Etape 1 : Concevoir le cahier de charge (Fini)
 
 | Nom | Partie |
 | ----| ------ |
@@ -10,11 +10,11 @@
 | Vlad | 3 - 6 |
 
 
-## Etape 2 : Concevoir les différents diagrammes 
+## Etape 2 : Concevoir les différents diagrammes (En cours)
 
 - diagramme use case : voir wiki
 
-## MVP
+## MVP (En cours)
 
 - fonction d'entrée et sortie du parking : Dans la branche enter-exit
 
