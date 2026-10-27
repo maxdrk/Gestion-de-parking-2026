@@ -10,6 +10,16 @@ try {
     Write-Host "Venv cree, activation..." -ForegroundColor Green
     .\venv\Scripts\Activate.ps1
 
+    if ($LASTEXITCODE -ne 0) {
+        throw "L'activation du venv a echoue." 
+    }
+
+    Write-Host("Installation des dépendances python")
+    python -m pip install -r requirement.txt
+    if ($LASTEXITCODE -ne 0){
+        throw "L'installation des dépendances à échoué" 
+    }
+
     Write-Host "Lancement du programme d'entree et de sortie du parking" -ForegroundColor Green
     python .\main.py
 }
