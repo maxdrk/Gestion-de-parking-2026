@@ -55,3 +55,12 @@ Le langage, l'interface et le mode de saisie ou de lecture des références rest
 ## Développement
 
 Travailler sur une branche dédiée, par exemple `feature/parking-entrees-sorties`. Tester le parcours complet entrée → recherche par référence → sortie avant de proposer les changements à fusionner dans `main`.
+
+
+## Utilisation du code 
+
+### Powershell
+
+```
+./run_env.ps1
+```
