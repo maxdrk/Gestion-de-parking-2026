@@ -7,6 +7,7 @@ with sqlite3.connect("tickets.db") as connexion:
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             heure_entree TEXT NOT NULL DEFAULT (datetime('now', 'localtime')),
             heure_sortie TEXT,
+            prix float,
             paid_tickets boolean
         )
     """)

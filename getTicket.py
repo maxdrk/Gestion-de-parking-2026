@@ -35,7 +35,7 @@ def getTickets(connexion, id):
     ).strip().lower()
 
     if confirmation == "y":
-        connexion.execute("""UPDATE tickets SET paid_tickets = 1 WHERE id = ?""",(id,))
+        connexion.execute("""UPDATE tickets SET paid_ticket = 1 WHERE id = ?""",(id,))
         connexion.commit()
         print("Paiement confirmé.")
         return total
