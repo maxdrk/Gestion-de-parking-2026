@@ -21,3 +21,5 @@
 ---
 
 > sur Base de cette template <br> **https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf**
+
+> Lien du wiki : https://github.com/maxdrk/Gestion-de-parking-2026/wiki
