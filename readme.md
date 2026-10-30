@@ -42,5 +42,5 @@ Cette branche contient tout le code dédié au paiement de ticket. Pour le momen
 
 
 > Lien du wiki : https://github.com/maxdrk/Gestion-de-parking-2026/wiki
-
+---
 <footer>© Maxime Derick,Gregory kabasele,Liam bruyere,Vladyslav Volodichev</footer>
