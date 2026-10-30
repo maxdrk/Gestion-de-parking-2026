@@ -22,6 +22,25 @@
 
 - fonction d'entrée et sortie du parking : Dans la branche enter-exit
 
+### Branches
+
+#### Enter-exit 
+
+Cette branche contient tout le code concernant la gestion d'entrée et de sortie du parking.
+
+- génération de ticket
+- cloture d'un ticket 
+- mise de ces tickets dans la base de données
+
+Note : Revérifier le MVP suite à la conception du diagramme de classe nombreuse ajouts sont nécessaires
+
+#### payment
+
+Cette branche contient tout le code dédié au paiement de ticket. Pour le moment cela gère seulement la durée qu'un client a passé dans le parking. Le plan tarifaire reste encore à faire.
+
 ---
 
+
 > Lien du wiki : https://github.com/maxdrk/Gestion-de-parking-2026/wiki
+
+<footer>© Maxime Derick,Gregory kabasele,Liam bruyere,Vladyslav Volodichev</footer>
