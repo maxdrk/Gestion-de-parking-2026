@@ -12,7 +12,9 @@
 
 ## Etape 2 : Concevoir les différents diagrammes (En cours)
 
-- diagramme use case : voir wiki
+- diagramme use case : voir wiki ( en révision )
+- diagramme de classe : voir wiki ( en révision )
+- diagramme séquentielle  <br> - Maxime X <br> - Greg X <br> - Liam X <br> - Vlad X 
 
 ## MVP (En cours)
 
