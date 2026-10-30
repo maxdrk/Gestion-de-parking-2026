@@ -6,7 +6,8 @@ with sqlite3.connect("tickets.db") as connexion:
         CREATE TABLE IF NOT EXISTS tickets (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             heure_entree TEXT NOT NULL DEFAULT (datetime('now', 'localtime')),
-            heure_sortie TEXT
+            heure_sortie TEXT,
+            paid_tickets boolean
         )
     """)
 
