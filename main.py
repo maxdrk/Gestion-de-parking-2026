@@ -1,17 +1,29 @@
-import sqlite3
-import getTicket
+import os
+import sys
 
-with sqlite3.connect("tickets.db") as connexion:
-    connexion.execute("""
-        CREATE TABLE IF NOT EXISTS tickets (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            heure_entree TEXT NOT NULL DEFAULT (datetime('now', 'localtime')),
-            heure_sortie TEXT,
-            prix float,
-            paid_tickets boolean
-        )
-    """)
+dossierTicket = os.path.abspath("tickets")
+dossierPayement = os.path.abspath("payment")
 
-id = int(input("Pour quel ticket voulez-vous sa durée :"))
+if dossierTicket not in sys.path:
+    sys.path.append(dossierTicket)
+import tickets.main as ticket
+import payment.main as payment
 
-getTicket.getTickets(connexion=connexion,id=id)
+
+try:
+    while True:
+        
+        choix = int(input("Que voulez-vous faire \n1. Entrer/sortir\n2. Payer\nchoix: "))
+        if choix == 1:
+            ticket.init()
+        elif choix == 2:
+            payment.init()
+        elif choix == 0:
+            break
+        else:
+            print("Erreur veuillez choisir une proposition valable")
+
+except:
+    print("Erreur veuillez choisir une proposition valable")            
+finally:
+    ticket.close()

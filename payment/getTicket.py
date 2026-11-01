@@ -5,18 +5,19 @@ def getTickets(connexion, id):
 
     ticket = connexion.execute(
         """
-        SELECT heure_entree, heure_sortie FROM tickets WHERE id = ?""",(id,)
+        SELECT heure_entree, heure_sortie,paid_ticket FROM tickets WHERE id = ?""",(id,)
     ).fetchone()
 
     if ticket is None:
         print("Aucun ticket existant pour cette référence.")
         return None
-    heure_entree, heure_sortie = ticket
+    heure_entree, heure_sortie,paid_ticket = ticket
 
     if heure_sortie is None:
         print("Ce ticket est toujours ouvert.")
         return None
-    
+    if paid_ticket == 1:
+        print("Le ticket est déjà payé")
     entree = datetime.datetime.fromisoformat(heure_entree)
     sortie = datetime.datetime.fromisoformat(heure_sortie)
     duree = sortie - entree
