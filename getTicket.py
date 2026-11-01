@@ -1,22 +1,23 @@
 import datetime
-import math
+from payment import calc_amount
+
 
 def getTickets(connexion, id):
-
-    ticket = connexion.execute(
-        """
-        SELECT heure_entree, heure_sortie
+    ticket = connexion.execute("""
+        SELECT heure_entree, heure_sortie, paid_ticket
         FROM tickets
         WHERE id = ?
-        """,
-        (id,)
-    ).fetchone()
+    """, (id,)).fetchone()
 
     if ticket is None:
         print("Aucun ticket existant pour cette référence.")
         return None
 
-    heure_entree, heure_sortie = ticket
+    heure_entree, heure_sortie, paid_ticket = ticket
+
+    if paid_ticket == 1:
+        print("Ce ticket est déjà payé.")
+        return None
 
     if heure_sortie is None:
         print("Ce ticket est toujours ouvert.")
@@ -24,19 +25,12 @@ def getTickets(connexion, id):
 
     entree = datetime.datetime.fromisoformat(heure_entree)
     sortie = datetime.datetime.fromisoformat(heure_sortie)
+
     duree = sortie - entree
-    duree_minutes = duree.total_seconds() / 60
-    
+
+    total = calc_amount(entree, sortie)
+
     print(f"Durée du stationnement : {duree}")
-    total = 0
-    if entree.hour >= 19 or entree.hour < 7:
-        total += 3
-    minutes_facturables = max(0, duree_minutes - 30)
-    tranches = math.ceil(minutes_facturables / 15)
-
-    total += tranches * 0.30
-    total = min(total, 12)
-
     print(f"Montant à payer : {total:.2f} €")
 
     confirmation = input(
@@ -44,8 +38,14 @@ def getTickets(connexion, id):
     ).strip().lower()
 
     if confirmation == "y":
-        connexion.execute(""" UPDATE tickets SET paid_ticket = 1 WHERE id = ?""",(id,))
+        connexion.execute("""
+            UPDATE tickets
+            SET prix = ?, paid_ticket = 1
+            WHERE id = ?
+        """, (total, id))
+
         connexion.commit()
+
         print("Paiement confirmé.")
         return total
 
