@@ -20,7 +20,7 @@ try {
         throw "L'installation des dépendances a echoue" 
     }
 
-    Write-Host "Lancement du programme de gestion de paiement" -ForegroundColor Green
+    Write-Host "Lancement du programme" -ForegroundColor Green
     python .\main.py
 }
 catch {

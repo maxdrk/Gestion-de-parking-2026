@@ -11,5 +11,5 @@ source venv/bin/activate
 echo "Installation des dépendances"
 python -m pip install -r requirement.txt
 
-echo "Lancement du programme de gestion de paiement"
+echo "Lancement du programme"
 python ./main.py
