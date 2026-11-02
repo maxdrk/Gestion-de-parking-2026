@@ -14,11 +14,11 @@
 
 ## Etape 2 : Concevoir les différents diagrammes (En cours)
 
-- diagramme use case : voir wiki ( en révision )
-- diagramme de classe : voir wiki ( en révision )
-- diagramme séquentielle  <br> - Maxime X <br> - Greg X <br> - Liam X <br> - Vlad X 
+- diagramme use case : voir wiki ( Fait  )
+- diagramme de classe : voir wiki ( Fait )
+- diagramme séquentielle  <br> - Maxime Ok <br> - Greg OK <br> - Liam OK <br> - Vlad X 
 
-## MVP (En cours)
+## MVP (Fini)
 
 - fonction d'entrée et sortie du parking : Dans la branche enter-exit
 
