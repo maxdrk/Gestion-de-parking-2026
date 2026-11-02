@@ -1,26 +1,42 @@
 # Gestion de parking
 
-Petit MVP en Python pour gérer les entrées, les sorties et le paiement des tickets d'un parking. Les données sont stockées localement dans une base SQLite (`tickets.db`).
+## Présentation du projet
 
-## Lancer l'application
+Ce projet consiste en un MVP développé en Python permettant de gérer manuellement les entrées, les sorties et les paiements des tickets d'un parking.
 
-Depuis la racine du projet :
+Les données sont stockées localement dans une base de données SQLite (`tickets.db`).
 
-- **Windows** : exécuter `run_env.ps1` dans PowerShell.
-- **Linux/macOS** : exécuter `bash run_env.sh`.
+L'application a été conçue pour fonctionner sans borne automatisée. Toutes les opérations sont effectuées manuellement par l'intermédiaire de l'interface en ligne de commande.
 
-Les scripts créent un environnement virtuel, installent la dépendance (`pandas`) puis démarrent l'application. On peut aussi lancer `python main.py` après avoir installé les dépendances.
+## Lancement de l'application
+
+Depuis la racine du projet, plusieurs possibilités permettent de démarrer l'application :
+
+- **Windows** : exécuter le script `run_env.ps1` dans PowerShell.
+- **Linux / macOS** : exécuter le script `run_env.sh`.
+- **Manuellement** : installer les dépendances nécessaires, puis lancer `python main.py`.
+
+Les scripts de lancement se chargent de créer un environnement virtuel, d'installer la dépendance `pandas` et de démarrer l'application.
 
 ## Utilisation
 
-Dans le menu principal, choisir :
+L'application propose un menu principal permettant d'accéder aux différentes fonctionnalités :
 
-1. **Entrer** : créer un ticket à l'arrivée du véhicule.
-2. **Payer** : saisir la référence du ticket pour calculer et confirmer le paiement.
-0. **Quitter** : fermer l'application.
+1. **Entrer** : permet d'accéder au menu de gestion des tickets, qui propose les opérations suivantes :
+   - Enregistrer l'entrée d'un véhicule.
+   - Enregistrer la sortie d'un véhicule.
+   - Consulter l'ensemble des tickets enregistrés, avec leurs heures d'entrée et de sortie ainsi que leur statut de paiement.
 
-Dans le menu des tickets, on peut enregistrer la sortie d'un véhicule ou afficher les tickets enregistrés.
+2. **Payer** : permet de saisir la référence d'un ticket afin de calculer le montant dû et de confirmer son paiement.
+
+3. **Quitter** : ferme l'application.
+
+Le menu de gestion des tickets centralise ainsi les opérations liées au suivi des véhicules présents dans le parking.
 
 ## Tarification du MVP
 
-Les 30 premières minutes sont gratuites. Ensuite, chaque tranche commencée de 15 minutes coûte 0,30 €, avec un maximum de 12 €.
+Le calcul du tarif repose sur les règles suivantes :
+
+- Les 30 premières minutes de stationnement sont gratuites.
+- Au-delà de cette période, chaque tranche de 15 minutes entamée est facturée 0,30 €.
+- Le montant total est plafonné à 12 €.
