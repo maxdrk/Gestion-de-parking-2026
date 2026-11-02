@@ -21,7 +21,7 @@ def script():
         \n 1. Introduire une entrée 
         \n 2. Introduire une sortie 
         \n 3. Afficher la base de données
-        \n 0. Fermer le programme 
+        \n 0. Revenir au menu 
         \n choix :"""))
         if choix == 1:
             enter.creation_ticket(connection=connection)

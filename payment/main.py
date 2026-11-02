@@ -18,9 +18,9 @@ def init():
     connexion = initSql()
     try:
         while True:
-            ticket_id = int(input("Pour quel ticket voulez-vous sa durée :"))
+            ticket_id = int(input("Introduire le numéro du ticket :"))
             getTicket.getTickets(connexion=connexion, id=ticket_id)
-            back = str(input("Revenir au menu ? Y/N")).lower()
+            back = str(input("Revenir au menu ? Y/N :")).lower()
             if back == "y":
                 break
     finally:
