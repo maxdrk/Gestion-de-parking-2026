@@ -1,75 +1,93 @@
-# Conception du projet de gestion de parking 
+# Gestion de parking 2026
 
-## Etape 1 : Concevoir le cahier de charge (Fini)
+MVP en Python pour gérer les entrées, les sorties et le paiement des tickets d'un parking. Les données sont stockées localement dans une base SQLite (`tickets.db`), créée automatiquement au premier lancement.
 
-| Nom | Partie |
-| ----| ------ |
-| Maxime | 1 - 3 (non-inclus) |
-| Liam | 1 - 3 (non-inclus) |
-| Greg | 3 - 6 |
-| Vlad | 3 - 6 |
-
-> sur Base de cette template <br> **https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf**
-
-
-## Etape 2 : Concevoir les différents diagrammes (En cours)
-
-- diagramme use case : voir wiki ( Fait  )
-- diagramme de classe : voir wiki ( Fait )
-- diagramme séquentielle  <br> - Maxime Ok <br> - Greg OK <br> - Liam OK <br> - Vlad X 
-
-## MVP (Fini)
-
-- fonction d'entrée et sortie du parking : Dans la branche enter-exit
-
-### Branches
-
-#### Enter-exit 
-
-Cette branche contient tout le code concernant la gestion d'entrée et de sortie du parking.
-
-- génération de ticket
-- cloture d'un ticket 
-- mise de ces tickets dans la base de données
-
-Note : Revérifier le MVP suite à la conception du diagramme de classe nombreuse ajouts sont nécessaires
-
-#### payment
-
-Cette branche contient tout le code dédié au paiement de ticket. Pour le moment cela gère seulement la durée qu'un client a passé dans le parking. Le plan tarifaire reste encore à faire.
+> Présentation du projet : [wiki](https://github.com/maxdrk/Gestion-de-parking-2026/wiki)
 
 ---
-
-
-> Lien du wiki : https://github.com/maxdrk/Gestion-de-parking-2026/wiki
----
-<footer>© Maxime Derick,Gregory kabasele,Liam bruyere,Vladyslav Volodichev</footer>
-
-
-
-# Gestion de parking
-
-Petit MVP en Python pour gérer les entrées, les sorties et le paiement des tickets d'un parking. Les données sont stockées localement dans une base SQLite (`tickets.db`).
 
 ## Lancer l'application
 
-Depuis la racine du projet :
+Les scripts se lancent **depuis le dossier `src/`** :
 
-- **Windows** : exécuter `run_env.ps1` dans PowerShell.
-- **Linux/macOS** : exécuter `bash run_env.sh`.
+```Windows
+cd src
+.\run_env.ps1        # PowerShell
+```
 
-Les scripts créent un environnement virtuel, installent la dépendance (`pandas`) puis démarrent l'application. On peut aussi lancer `python main.py` après avoir installé les dépendances.
+```Linux / macOS
+cd src
+bash run_env.sh      # Bash
+```
+
+Ils créent un environnement virtuel, installent les dépendances (`pandas`), puis démarrent l'application.
+Si les dépendances sont déjà installées, on peut aussi lancer directement `python main.py` depuis `src/`.
 
 ## Utilisation
 
-Dans le menu principal, choisir :
+**Menu principal**
 
-1. **Entrer** : créer un ticket à l'arrivée du véhicule.
-2. **Payer** : saisir la référence du ticket pour calculer et confirmer le paiement.
-0. **Quitter** : fermer l'application.
+- **1. Entrer / sortir** : ouvre le menu des tickets
+- **2. Payer** : saisir le numéro du ticket pour calculer et confirmer le paiement
+- **0. Quitter le programme**
 
-Dans le menu des tickets, on peut enregistrer la sortie d'un véhicule ou afficher les tickets enregistrés.
+**Menu des tickets**
+
+- **1.** Introduire une entrée
+- **2.** Introduire une sortie
+- **3.** Afficher la base de données
+- **0.** Revenir au menu principal
 
 ## Tarification du MVP
 
-Les 30 premières minutes sont gratuites. Ensuite, chaque tranche commencée de 15 minutes coûte 0,30 €, avec un maximum de 12 €.
+- Les 30 premières minutes sont gratuites.
+- Ensuite, chaque quart d'heure commencé coûte 0,30 €.
+- Maximum de 12 € par 24 h.
+
+## Structure du projet
+
+```
+├── docs/
+│   ├── Cahier des charges/
+│   ├── Diagrammes/
+│   └── Use Case/
+└── src/
+    ├── main.py            ← point d'entrée (menu principal)
+    ├── requirement.txt
+    ├── run_env.ps1
+    ├── run_env.sh
+    ├── tickets/           ← entrées, sorties, affichage
+    └── payment/           ← calcul et confirmation du paiement
+```
+
+## Branches
+
+- **`main`** : version stable.
+- **`dev`** : intégration de nos fonctionnalités terminées.
+- **`enter-exit`** : gestion des entrées et sorties.
+- **`payment`** : paiement des tickets.
+
+## Avancement
+
+- **Cahier des charges** : terminé
+- **Diagramme use case** : terminé
+- **Diagramme de classes** : terminé
+- **Diagrammes de séquence** : en cours
+  - Maxime -> OK
+  - Gregory -> OK
+  - Liam -> OK
+  - Vladyslav -> EN ATTENTE
+- **MVP entrée / sortie / paiement** : terminé
+
+**Répartition du cahier des charges** (sur base du [template EPHEC](https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf)) :
+
+- **Maxime** et **Liam** : parties 1 à 3 (non incluse)
+- **Gregory** et **Vladyslav** : parties 3 à 6
+
+## Usage de l'IA
+
+*L’IA Claude Opus 5.5 (Anthropic), en effort moyen, a été utilisée pour aider à la mise en forme de ce README..*
+
+---
+
+© Maxime Derick, Gregory Kabasele, Liam Bruyère, Vladyslav Volodichev
