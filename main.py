@@ -13,7 +13,11 @@ import payment.main as payment
 try:
     while True:
         
-        choix = int(input("Que voulez-vous faire \n1. Entrer/sortir\n2. Payer\n0. Quitter le programme \nchoix: "))
+        choix = int(input("""Que voulez-vous faire ?
+        \n1. Entrer/sortir
+        \n2. Payer
+        \n0. Quitter le programme
+        \nchoix: """))
         if choix == 1:
             ticket.init()
         elif choix == 2:

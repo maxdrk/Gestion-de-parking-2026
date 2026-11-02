@@ -12,4 +12,5 @@ echo "Installation des dépendances"
 python -m pip install -r requirement.txt
 
 echo "Lancement du programme"
+echo " "
 python ./main.py

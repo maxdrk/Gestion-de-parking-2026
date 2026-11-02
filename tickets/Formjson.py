@@ -4,10 +4,9 @@ from io import StringIO
 
 
 def FormatJson(connexion):
-    cursor = connexion.execute("SELECT id as référence,heure_entree as arrivée, heure_sortie as sortie FROM tickets")
+    cursor = connexion.execute("SELECT id as référence,heure_entree as arrivée, heure_sortie as sortie, paid_ticket as payé FROM tickets")
     colonnes = [description[0] for description in cursor.description]
     lignes = cursor.fetchall()
-
     data = [dict(zip(colonnes, ligne)) for ligne in lignes]
     return json.dumps(data, ensure_ascii=False, indent=4)
 
