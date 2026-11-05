@@ -22,7 +22,7 @@ Les scripts de lancement se chargent de créer un environnement virtuel, d'insta
 
 L'application propose un menu principal permettant d'accéder aux différentes fonctionnalités :
 
-1. **Entrer** : permet d'accéder au menu de gestion des tickets, qui propose les opérations suivantes :
+1. **Entrer/Sortir** : permet d'accéder au menu de gestion des tickets, qui propose les opérations suivantes :
    - Enregistrer l'entrée d'un véhicule.
    - Enregistrer la sortie d'un véhicule.
    - Consulter l'ensemble des tickets enregistrés, avec leurs heures d'entrée et de sortie ainsi que leur statut de paiement.
