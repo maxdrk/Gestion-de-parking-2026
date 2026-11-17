@@ -32,6 +32,7 @@ class GUI:
 
 
     def Menu(self):
+
         self.__frame = tk.Frame(self.app)
         self.__title = tk.Label(self.__frame,text="Gestion de parking",font=("Arial", 20))
         self.__title.pack(pady=20)
@@ -49,8 +50,10 @@ class GUI:
         self.__title.pack(pady=20)
         self.__button_enter = tk.Button(self.__enterExit,text="Enregistrer une entrée",width=25,command=self.ticket.enter)
         self.__button_enter.pack(pady=10)
-        self.__button_exit = tk.Button(self.__enterExit,text="Enregistrer une sortie",width=25,command=lambda: messagebox.showinfo("Indisponible","En cours de développement"))
+        self.__button_exit = tk.Button(self.__enterExit,text="Enregistrer une sortie",width=25,command=self.ticket.sortie)
         self.__button_exit.pack(pady=10)
+        self.__button_pay = tk.Button(self.__enterExit,text="Payer le ticket",width=25,command=lambda:messagebox.showinfo("","En développement"))
+        self.__button_pay.pack(pady=20)
         self.__button_back = tk.Button(self.__enterExit,text="Retour au menu",command=self.backMenu)
         self.__button_back.pack(pady=20)
 
