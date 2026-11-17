@@ -1,6 +1,6 @@
 from parking import Parking
 from sql import SQL
-
+from tkinter import messagebox
 
 class Ticket:
 
@@ -15,7 +15,7 @@ class Ticket:
                 print(f"Erreur lors de la génération du ticket : {command}")
                 return None
             ticketId = command.lastrowid
-            print(f"Ticket généré avec succès : {ticketId}")
+            messagebox.showinfo("succès",f"Ticket généré avec succès \n numéro : {ticketId}")
             return ticketId
         else:
             print("Parking complet")
