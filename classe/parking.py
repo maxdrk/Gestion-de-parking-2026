@@ -11,4 +11,6 @@ class Parking:
         if isinstance(response, Exception):
             return False
         places_occupees = response.fetchone()[0]
-        return places_occupees < self.__capacity
+        return self.__capacity - places_occupees
+
+    
