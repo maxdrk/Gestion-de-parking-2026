@@ -1,0 +1,129 @@
+Screen {
+    align: center middle;
+}
+
+/* ---------- Accueil ---------- */
+
+#accueil {
+    width: auto;
+    height: auto;
+}
+
+#banniere {
+    width: auto;
+    margin-bottom: 1;
+}
+
+#menu {
+    width: 40;
+}
+
+/* ---------- Pages ---------- */
+
+.page {
+    width: 50;
+    height: auto;
+}
+
+.page.large {
+    width: 95%;
+    height: 90%;
+}
+
+.titre {
+    width: 100%;
+    text-style: bold;
+}
+
+.info {
+    width: 100%;
+    margin-bottom: 1;
+}
+
+.aide {
+    width: 100%;
+    color: $text-muted;
+    content-align: center middle;
+    margin-top: 1;
+}
+
+#table {
+    height: 1fr;
+}
+
+#maj {
+    content-align: right middle;
+    margin-top: 0;
+}
+
+/* ---------- Listes (navigation aux flèches) ---------- */
+
+OptionList, OptionList:focus {
+    border: round $foreground 30%;
+    background: transparent;
+    background-tint: transparent;
+    padding: 0 1;
+}
+
+OptionList > .option-list--option-highlighted,
+OptionList:focus > .option-list--option-highlighted {
+    color: $background;
+    background: $foreground;
+    text-style: bold;
+}
+
+/* ---------- Tableau ---------- */
+
+DataTable, DataTable:focus {
+    border: round $foreground 30%;
+    background: transparent;
+    background-tint: transparent;
+}
+
+DataTable > .datatable--header {
+    background: transparent;
+    color: $foreground;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor,
+DataTable:focus > .datatable--cursor {
+    color: $background;
+    background: $foreground;
+    text-style: bold;
+}
+
+/* ---------- Fenêtres ---------- */
+
+ModalScreen {
+    align: center middle;
+}
+
+.dialog {
+    width: 56;
+    height: auto;
+    padding: 1 2;
+    border: round $foreground 50%;
+    background: $background;
+}
+
+.dialog-titre {
+    width: 100%;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+.dialog-message {
+    width: 100%;
+}
+
+.dialog Input, .dialog Input:focus {
+    margin-top: 1;
+    border: round $foreground 30%;
+    background: transparent;
+    background-tint: transparent;
+}
+
+.dialog OptionList {
+    margin-top: 1;
+}
