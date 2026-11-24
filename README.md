@@ -8,20 +8,23 @@ MVP en Python pour gérer les entrées, les sorties et le paiement des tickets d
 
 ## Lancer l'application
 
-Les scripts se lancent **depuis le dossier `src/`** :
+Les scripts se lancent **depuis la racine du projet** :
 
 ```Windows
-cd src
 .\run_env.ps1        # PowerShell
 ```
 
 ```Linux / macOS
-cd src
 bash run_env.sh      # Bash
 ```
 
-Ils créent un environnement virtuel, installent les dépendances (`pandas`), puis démarrent l'application.
-Si les dépendances sont déjà installées, on peut aussi lancer directement `python main.py` depuis `src/`.
+Ils créent un environnement virtuel, installent les dépendances (`pandas`, `pandastable`, `textual`), puis démarrent la version console.
+
+Si les dépendances sont déjà installées, on peut lancer directement depuis la racine :
+
+- `python main_cli.py` : version console
+- `python main_gui.py` : interface graphique (Tkinter)
+- `python main_tui.py` : interface terminal (Textual)
 
 ## Utilisation
 
@@ -47,17 +50,28 @@ Si les dépendances sont déjà installées, on peut aussi lancer directement `p
 ## Structure du projet
 
 ```
+├── main_cli.py            ← version console
+├── main_gui.py            ← interface graphique
+├── main_tui.py            ← interface terminal
+├── requirements.txt
+├── run_env.ps1
+├── run_env.sh
 ├── docs/
 │   ├── Cahier des charges/
 │   ├── Diagrammes/
 │   └── Use Case/
-└── src/
-    ├── main.py            ← point d'entrée (menu principal)
-    ├── requirement.txt
-    ├── run_env.ps1
-    ├── run_env.sh
-    ├── tickets/           ← entrées, sorties, affichage
-    └── payment/           ← calcul et confirmation du paiement
+├── classe/                ← code partagé par les interfaces
+│   ├── sql.py             ← connexion à la base de données
+│   └── parking.py         ← gestion des places
+├── cli/
+│   ├── tickets/           ← entrées, sorties, affichage
+│   └── payment/           ← calcul et confirmation du paiement
+├── gui/
+│   ├── gui.py
+│   └── ticket.py
+└── tui/
+    ├── tui.py
+    └── tui.tcss
 ```
 
 ## Branches
@@ -76,7 +90,7 @@ Si les dépendances sont déjà installées, on peut aussi lancer directement `p
   - Maxime -> OK
   - Gregory -> OK
   - Liam -> OK
-  - Vladyslav -> EN ATTENTE
+  - Vladyslav -> OK
 - **MVP entrée / sortie / paiement** : terminé
 
 **Répartition du cahier des charges** (sur base du [template EPHEC](https://moodle.ephec.be/pluginfile.php/1111827/mod_resource/content/0/Cahier%20des%20Charges%20-%20Template.pdf)) :
@@ -86,7 +100,7 @@ Si les dépendances sont déjà installées, on peut aussi lancer directement `p
 
 ## Usage de l'IA
 
-*L’IA Claude Opus 5.5 (Anthropic), en effort moyen, a été utilisée pour aider à la mise en forme de ce README..*
+*L'IA Claude Opus 5.5 (Anthropic), en effort moyen, a été utilisée pour aider à la mise en forme de ce README.*
 
 ---
 
