@@ -1,13 +1,5 @@
-import os
-import sys
-
-dossierTicket = os.path.abspath("tickets")
-dossierPayement = os.path.abspath("payment")
-
-if dossierTicket not in sys.path:
-    sys.path.append(dossierTicket)
-import tickets.main as ticket
-import payment.main as payment
+import cli.tickets.main as ticket
+import cli.payment.main as payment
 
 
 try:

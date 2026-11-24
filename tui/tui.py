@@ -1,5 +1,3 @@
-import math
-import os
 import sys
 from datetime import datetime, timedelta
 
@@ -11,11 +9,9 @@ from textual.screen import ModalScreen, Screen
 from textual.widgets import DataTable, Input, OptionList, Static
 from textual.widgets.option_list import Option
 
-# sql.py et parking.py se trouvent dans le dossier classe/
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "classe"))
 
-from parking import Parking
-from sql import SQL
+from classe.parking import Parking
+from classe.sql import SQL
 
 
 BANNIERE_GRANDE = """\

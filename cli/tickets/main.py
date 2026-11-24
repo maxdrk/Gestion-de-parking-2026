@@ -1,7 +1,7 @@
-import enter
-import exit
+from cli.tickets import enter
+from cli.tickets import exit
 import sqlite3
-import Formjson
+from cli.tickets import Formjson
 
 
 connection = sqlite3.connect("tickets.db")

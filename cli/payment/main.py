@@ -1,5 +1,5 @@
 import sqlite3
-import payment.getTicket as getTicket
+import cli.payment.getTicket as getTicket
 
 def initSql():
     connexion = sqlite3.connect("tickets.db")

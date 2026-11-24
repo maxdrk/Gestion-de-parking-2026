@@ -1,5 +1,5 @@
-from parking import Parking
-from sql import SQL
+from classe.parking import Parking
+from classe.sql import SQL
 from tkinter import messagebox
 from datetime import datetime
 from tkinter import simpledialog

@@ -1,9 +1,9 @@
 
 import tkinter as tk
-from sql import SQL 
-from ticket import Ticket
+from classe.sql import SQL 
+from gui.ticket import Ticket
 from tkinter import messagebox
-from parking import Parking
+from classe.parking import Parking
 from pandastable import Table
 
 class GUI:
