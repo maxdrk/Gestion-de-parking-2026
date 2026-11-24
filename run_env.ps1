@@ -15,13 +15,13 @@ try {
     }
 
     Write-Host("Installation des dependances python")
-    python -m pip install -r requirement.txt
+    python -m pip install -r requirements.txt
     if ($LASTEXITCODE -ne 0){
         throw "L'installation des dépendances a echoue" 
     }
 
     Write-Host "Lancement du programme" -ForegroundColor Green
-    python .\main.py
+    python .\main_cli.py
 }
 catch {
     Write-Host "Erreur : $_" -ForegroundColor Red

@@ -9,7 +9,7 @@ echo "Activation du venv"
 source venv/bin/activate
 
 echo "Installation des dépendances"
-python -m pip install -r requirement.txt
+python -m pip install -r requirements.txt
 
 echo "Lancement du programme"
-python ./main.py
+python ./main_cli.py
