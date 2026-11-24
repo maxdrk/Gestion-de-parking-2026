@@ -1,5 +1,5 @@
 venv/
 *.db
-__pycache__/
+__pycache__/*
 *.pyc
 .idea/
