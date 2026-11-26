@@ -27,8 +27,8 @@ class Ticket:
         else:
             messagebox.showerror("Erreur","Parking complet")
             return None
-    def sortie(self):
-        ticketId = simpledialog.askinteger(title="Numéro du ticket",prompt="Quel est le numéro du ticket à clôturer ?")
+    def sortie(self,ticketId):
+        #ticketId = simpledialog.askinteger(title="Numéro du ticket",prompt="Quel est le numéro du ticket à clôturer ?")
         if ticketId is None:
             return
         ticket = self.ObtenirTicket(ticketId)
@@ -59,8 +59,9 @@ class Ticket:
 
         return ticket
 
-    def payer(self):
-        ticketId = simpledialog.askinteger(title="Numéro du ticket", prompt="Quel est le numéro du ticket à payer ?")
+    def payer(self, ticketId=None):
+        if ticketId is None:
+            ticketId = simpledialog.askinteger(title="Numéro du ticket", prompt="Quel est le numéro du ticket à payer ?")
         if ticketId is None:
             return None
 
